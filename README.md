@@ -2,7 +2,18 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, config the file .env.development:
+
+```bash
+# Api Host
+API_HOST=localhost
+# Api Port
+API_PORT=3001
+# Api Route
+API_PORT=api/
+```
+
+Run the development server:
 
 ```bash
 npm run dev
