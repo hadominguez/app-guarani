@@ -1,4 +1,5 @@
-export default function myFetch (route, method, body, content) {
+require('dotenv').config({ path: `.env.${process.env.NODE_ENV}`});
+export function myFetch (route, method, body, content) {
     let myRequest = {};
     if(method == 'GET' || method == 'DELETE'){
         myRequest = {
@@ -18,5 +19,5 @@ export default function myFetch (route, method, body, content) {
             }
         }
     }
-    return fetch('http://localhost:3000/api/' + route, myRequest ).then(res => res.json());
+    return fetch('http://'+ process.env.API_HOST + route, myRequest ).then(res => res.json());
 }
